@@ -27,16 +27,25 @@ header {
     width: 100%;
     font-size: 25px;
     margin: 20px;
+    text-align: center;
 }
 
 article {
     width: 100%;
     padding: 20px;
     grid-area: _article;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    font-size: 1.2em;
+    display: flex;
+}
+article #szoveg {
+    width: 40%;
+    text-align: justify;
+}
+article #kepek {
+    width: 50%;
 }
 article #kepek img{
+    display: block;
     width: calc(100% - 20px);
     margin: 10px;
 }
@@ -46,10 +55,29 @@ aside {
     padding: 10px;
     width: 100%;
 }
-aside ul li {
-    list-style-type: none;
+aside ul{
+    margin: 10px 10px 10px 0;
+    padding: 0;
 }
-
+aside ul li {
+    display: block;
+    list-style-type: none;
+    margin: 10px;
+    padding: 5px;
+}
+aside ul li a, aside ul li a:visited{
+    background-color: #dedede;
+    text-decoration: none;
+    color: grey;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+aside ul li a:active, aside ul li a:hover{
+    background-color: grey;
+    color: #dedede;
+}
 
 footer {
     grid-area: _footer;
