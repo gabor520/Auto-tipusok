@@ -16,7 +16,7 @@ main {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 5fr 1fr;
     grid-template-areas: "_head _head"
                          "_article _nav"
                          "_footer _footer";
@@ -93,4 +93,21 @@ aside ul li a:active, aside ul li a:hover {
     background-color: #bbb;
     color: #999;
     font-weight: bold;
+}
+
+
+@media screen and (max-width: 870px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: "_head"
+                             "_nav"
+                             "_article"
+                             "_footer";
+    }
+}
+
+@media  screen and (max-width: 600px) {
+    article .elem {
+        grid-template-columns: 1fr;
+    }
 }
