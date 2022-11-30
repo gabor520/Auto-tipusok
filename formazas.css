@@ -26,58 +26,39 @@ header {
     grid-area: _head;
     width: 100%;
     font-size: 25px;
-    margin: 20px;
+    padding: 20px;
     text-align: center;
 }
 
 article {
-    width: 100%;
-    padding: 20px;
+    margin: 20px;
     grid-area: _article;
     font-size: 1.2em;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
 }
-article #szoveg {
-    width: 40%;
+article .elem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+article .szoveg {
     text-align: justify;
+    padding: 10px;
 }
-article #kepek {
-    width: 50%;
+article .szoveg h2{
+    margin: 0 0 10px 0;
 }
-article #kepek img{
-    display: block;
+article .kep img{
     width: calc(100% - 20px);
     margin: 10px;
 }
 
 aside {
     grid-area: _nav;
-    padding: 10px;
     width: 100%;
 }
-aside ul{
-    margin: 10px 10px 10px 0;
-    padding: 0;
-}
-aside ul li {
-    display: block;
-    list-style-type: none;
-    margin: 10px;
-    padding: 5px;
-}
-aside ul li a, aside ul li a:visited{
-    background-color: #dedede;
-    text-decoration: none;
-    color: grey;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 5px;
-    transition: 0.5s;
-}
-aside ul li a:active, aside ul li a:hover{
-    background-color: grey;
-    color: #dedede;
-}
+
 
 footer {
     grid-area: _footer;
