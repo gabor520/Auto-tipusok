@@ -20,6 +20,7 @@ main {
     grid-template-areas: "_head _head"
                          "_article _nav"
                          "_footer _footer";
+    background-color: #e0e0e0;
 }
 
 header {
@@ -41,17 +42,23 @@ article {
 article .elem {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: #ccc;
+    border-radius: 10px;
 }
 article .szoveg {
     text-align: justify;
     padding: 10px;
+    font-size: 1.1em;
+    color: #333;
 }
 article .szoveg h2{
     margin: 0 0 10px 0;
+    font-size: 1.8em;
 }
 article .kep img{
     width: calc(100% - 20px);
     margin: 10px;
+    border-radius: 10px;
 }
 
 aside {
@@ -65,7 +72,7 @@ footer {
 }
 /* menu formazasa*/
 aside ul{
-    margin: 10px 10px 10px 0;
+    margin: 15px 10px 10px 0;
     padding: 0;
 }
 aside ul li {
@@ -85,4 +92,5 @@ aside ul li a, aside ul li a:visited{
 aside ul li a:active, aside ul li a:hover {
     background-color: #bbb;
     color: #999;
+    font-weight: bold;
 }
